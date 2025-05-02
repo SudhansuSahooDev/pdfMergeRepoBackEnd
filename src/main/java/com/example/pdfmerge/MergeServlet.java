@@ -4,7 +4,7 @@ import java.io.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet("/merge")
+
 public class MergeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/pdf");
