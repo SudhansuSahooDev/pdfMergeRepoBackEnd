@@ -5,4 +5,4 @@ RUN mvn clean package
 
 FROM tomcat:9.0-jdk11
 RUN rm -rf /usr/local/tomcat/webapps/*
-COPY --from=build /app/target/pdf-merge-backend.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=build /app/target/pdf-merge-backend-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
