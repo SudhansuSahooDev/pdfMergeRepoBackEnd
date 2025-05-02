@@ -22,7 +22,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the jar from the build stage
-COPY --from=build /app/target/pdf-merge-backend.jar /app/pdf-merge-backend.jar
+COPY --from=build /app/target/pdf-merge-backend-1.0-SNAPSHOT.jar /app/pdf-merge-backend.jar
 
 # Run the application
 CMD ["java", "-jar", "/app/pdf-merge-backend.jar"]
