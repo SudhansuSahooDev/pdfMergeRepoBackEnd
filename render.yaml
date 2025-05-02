@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: pdf-merge-backend
+    env: java
+    plan: free
+    buildCommand: |
+      apt-get update
+      apt-get install -y maven
+      mvn clean package
+    startCommand: java -jar target/pdf-merge-backend.jar
