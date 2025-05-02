@@ -8,6 +8,9 @@ import javax.servlet.annotation.*;
 public class MergeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/pdf");
+    response.setHeader("Access-Control-Allow-Origin", "https://pdf-merge-front-end-i8rz.vercel.app");
+    response.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    response.setHeader("Access-Control-Allow-Headers", "Content-Type");
         try {
         Part file1 = request.getPart("file1");
         Part file2 = request.getPart("file2");
@@ -30,4 +33,12 @@ public class MergeServlet extends HttpServlet {
         	System.out.println("Isssue");
         }
     }
+
+    @Override
+protected void doOptions(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    response.setHeader("Access-Control-Allow-Origin", "https://pdf-merge-front-end-i8rz.vercel.app");
+    response.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    response.setHeader("Access-Control-Allow-Headers", "Content-Type");
+}
+
 }
