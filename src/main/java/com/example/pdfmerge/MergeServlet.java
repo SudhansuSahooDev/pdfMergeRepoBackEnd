@@ -3,6 +3,7 @@ package com.example.pdfmerge;
 import java.io.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
 
 
 public class MergeServlet extends HttpServlet {
